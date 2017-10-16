@@ -1,2 +1,2 @@
 Machine Learning initiatives 
-1.	AITC_MNB (Automatic IT Ticket Classifier) using Machine Learning Algorithm Multinomial Naive Bayes
+1.	AITC_MNB (Automatic IT Ticket Classifier) using Machine Learning Algorithm Multinomial Naive Bayes (Supervised Learning)
