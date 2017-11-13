@@ -37,3 +37,16 @@ print(sess.run(adder_node, {a:[1,3], b:[2,4]}))
 
 add_and_triple = adder_node * 3
 print("add_and_triple",sess.run(add_and_triple, {a:av, b:bv}))
+
+#New output with the same input, Variables allow us to add trainable parameters to a graph.
+W = tf.Variable([.3], dtype=tf.float32)
+b = tf.Variable([-.3], dtype=tf.float32)
+x = tf.placeholder(tf.float32)
+linear_model = W*x + b
+
+# To initialize a constant call tf.constant
+# To initialize a variable calling tf.Variable doesn't work
+
+init = tf.global_variables_initializer()
+sess.run(init)
+print("linear_model value:",sess.run(linear_model, {x: 1}))
