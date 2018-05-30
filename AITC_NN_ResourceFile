@@ -1,0 +1,7 @@
+https://developers.googleblog.com/2017/09/introducing-tensorflow-datasets.html
+
+Dataset: Base class containing methods to create and transform datasets. Also allows you initialize a dataset from data in memory, or from a Python generator.
+TextLineDataset: Reads lines from text files.
+TFRecordDataset: Reads records from TFRecord files.
+FixedLengthRecordDataset: Reads fixed size records from binary files.
+Iterator: Provides a way to access one dataset element at a time.
