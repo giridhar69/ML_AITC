@@ -80,10 +80,10 @@ vectorizer = CountVectorizer()
 bow = vectorizer.fit_transform(docs)
 freqs = [(word, bow.getcol(idx).sum()) for word, idx in vectorizer.vocabulary_.items()]
 results=sorted (freqs, key = lambda x: -x[1])
+print('Count Vectorizer:')
 print(results)
 
 # To show as a table the occurance of the words
-
 feature_names = vectorizer.get_feature_names()
 corpus_index = [n for n in docs]
 df = pd.DataFrame(bow.todense(), index=corpus_index, columns=feature_names)
@@ -95,10 +95,11 @@ vectorizer1 = TfidfVectorizer(sublinear_tf=True, max_df=1.0)
 bow1 = vectorizer1.fit_transform(docs)
 freqs1 = [(word, bow1.getcol(idx).sum()) for word, idx in vectorizer1.vocabulary_.items()]
 results1=sorted (freqs1, key = lambda x: -x[1])
+print('TF-IDF Vectorizer:')
 print(results1)
 
 # To show as a table the TF-IDF calculated
 feature_names = vectorizer1.get_feature_names()
 corpus_index = [n for n in docs]
 df = pd.DataFrame(bow1.todense(), index=corpus_index, columns=feature_names)
-df
+print(df)
